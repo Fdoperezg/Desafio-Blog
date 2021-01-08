@@ -1,0 +1,12 @@
+<h1>Juegos de The Legend of Zelda</h1>
+
+<%= link_to "Dashboard", post_dashboard_path%>
+
+<% @posts.each do |post| %>
+    <ul>
+        <li><%=post.title%></li>
+        <li><%=post.created_at%></li>
+        <li><%=image_tag post.image_url%></li>
+        <li><%=post.content%></li>
+    </ul>
+<%end%>
